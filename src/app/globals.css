@@ -1,26 +1,138 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* LSR Brand Colors */
+  --background: #FDFBF7;
+  --foreground: #3D3D3D;
+
+  /* Primary - Warm Earthy Tones */
+  --sage-50: #F4F7F4;
+  --sage-100: #E8EFE8;
+  --sage-200: #C9D9C9;
+  --sage-300: #A8C4A8;
+  --sage-400: #7BA67B;
+  --sage-500: #5D8A5D;
+  --sage-600: #4A7149;
+
+  /* Warm Taupes */
+  --taupe-50: #FAF8F5;
+  --taupe-100: #F0EBE3;
+  --taupe-200: #E2D9CC;
+  --taupe-300: #C9BAA5;
+  --taupe-400: #A89580;
+  --taupe-500: #8A7562;
+
+  /* Muted Golds */
+  --gold-50: #FDFBF3;
+  --gold-100: #F9F3E3;
+  --gold-200: #F0E4C5;
+  --gold-300: #E4D09E;
+  --gold-400: #D4B872;
+  --gold-500: #C4A04E;
+
+  /* Accent - Calming Teal */
+  --teal-50: #F0F9F8;
+  --teal-100: #D5F0ED;
+  --teal-200: #A8E0DA;
+  --teal-300: #72C9C0;
+  --teal-400: #4AB0A6;
+  --teal-500: #2E918A;
+  --teal-600: #247571;
+
+  /* Accent - Soft Coral */
+  --coral-50: #FEF6F4;
+  --coral-100: #FCE8E4;
+  --coral-200: #F9D0C7;
+  --coral-300: #F4AE9F;
+  --coral-400: #EB8C78;
+  --coral-500: #E06B52;
+
+  /* Neutrals */
+  --cream: #FDFBF7;
+  --cream-dark: #F5F0E8;
+  --charcoal: #3D3D3D;
+  --charcoal-light: #5C5C5C;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-sans: var(--font-dm-sans);
+  --font-serif: var(--font-playfair);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Custom Colors */
+  --color-sage-50: var(--sage-50);
+  --color-sage-100: var(--sage-100);
+  --color-sage-200: var(--sage-200);
+  --color-sage-300: var(--sage-300);
+  --color-sage-400: var(--sage-400);
+  --color-sage-500: var(--sage-500);
+  --color-sage-600: var(--sage-600);
+
+  --color-taupe-50: var(--taupe-50);
+  --color-taupe-100: var(--taupe-100);
+  --color-taupe-200: var(--taupe-200);
+  --color-taupe-300: var(--taupe-300);
+  --color-taupe-400: var(--taupe-400);
+  --color-taupe-500: var(--taupe-500);
+
+  --color-gold-50: var(--gold-50);
+  --color-gold-100: var(--gold-100);
+  --color-gold-200: var(--gold-200);
+  --color-gold-300: var(--gold-300);
+  --color-gold-400: var(--gold-400);
+  --color-gold-500: var(--gold-500);
+
+  --color-teal-50: var(--teal-50);
+  --color-teal-100: var(--teal-100);
+  --color-teal-200: var(--teal-200);
+  --color-teal-300: var(--teal-300);
+  --color-teal-400: var(--teal-400);
+  --color-teal-500: var(--teal-500);
+  --color-teal-600: var(--teal-600);
+
+  --color-coral-50: var(--coral-50);
+  --color-coral-100: var(--coral-100);
+  --color-coral-200: var(--coral-200);
+  --color-coral-300: var(--coral-300);
+  --color-coral-400: var(--coral-400);
+  --color-coral-500: var(--coral-500);
+
+  --color-cream: var(--cream);
+  --color-cream-dark: var(--cream-dark);
+  --color-charcoal: var(--charcoal);
+  --color-charcoal-light: var(--charcoal-light);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair), Georgia, serif;
+}
+
+/* Smooth scrolling for the whole page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--taupe-300);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--taupe-400);
 }

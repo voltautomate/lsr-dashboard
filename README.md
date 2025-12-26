@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LSR Automation & Infrastructure Dashboard
+
+A modern, interactive dashboard showcasing automation and infrastructure work completed for Limbic System Rewire (LSR).
+
+## Features
+
+- **Animated Counters**: Numbers count up on scroll for impactful data presentation
+- **Interactive Project Cards**: Click to expand and see detailed metrics
+- **Progress Indicators**: Visual progress bars for in-progress projects
+- **Responsive Design**: Optimized for desktop, tablet, and mobile
+- **Smooth Animations**: Powered by Framer Motion
+- **Brand-Aligned Design**: Warm, wellness-inspired color palette
+
+## Tech Stack
+
+- **Framework**: Next.js 14+ (App Router)
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Fonts**: Playfair Display (headers) + DM Sans (body)
 
 ## Getting Started
 
-First, run the development server:
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+2. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Deployment
+
+This project is configured for deployment on Vercel:
+
+1. Push to GitHub
+2. Import the repository in Vercel
+3. Deploy automatically
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── globals.css      # Global styles and Tailwind config
+│   ├── layout.tsx       # Root layout with fonts
+│   └── page.tsx         # Main page
+├── components/
+│   ├── AnimatedCounter.tsx
+│   ├── Footer.tsx
+│   ├── HeroSection.tsx
+│   ├── Navigation.tsx
+│   ├── ProgressBar.tsx
+│   ├── ProjectCard.tsx
+│   └── SectionHeader.tsx
+├── sections/
+│   ├── CompletedProjects.tsx
+│   ├── FutureRoadmap.tsx
+│   └── InProgressProjects.tsx
+└── data/
+    └── projects.ts      # All project data (easy to update)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Updating Data
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+All project metrics and information are stored in `src/data/projects.ts`. Update this file to modify:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Completed project metrics
+- In-progress project status
+- Future roadmap items
+- Summary statistics
 
-## Learn More
+## Brand Colors
 
-To learn more about Next.js, take a look at the following resources:
+- **Sage Green**: Primary brand color
+- **Teal**: Accent for in-progress items
+- **Gold**: Accent for opportunities/roadmap
+- **Coral**: Used for "before" states and highlights
+- **Cream/Taupe**: Neutral backgrounds
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built for Limbic System Rewire by your automation team.
