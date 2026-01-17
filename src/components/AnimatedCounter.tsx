@@ -9,6 +9,7 @@ interface AnimatedCounterProps {
   suffix?: string;
   duration?: number;
   className?: string;
+  decimals?: number;
 }
 
 export default function AnimatedCounter({
@@ -17,6 +18,7 @@ export default function AnimatedCounter({
   suffix = '',
   duration = 2,
   className = '',
+  decimals = 0,
 }: AnimatedCounterProps) {
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
@@ -27,9 +29,12 @@ export default function AnimatedCounter({
     bounce: 0,
   });
 
-  const display = useTransform(spring, (current) =>
-    Math.round(current).toLocaleString()
-  );
+  const display = useTransform(spring, (current) => {
+    if (decimals > 0) {
+      return current.toFixed(decimals);
+    }
+    return Math.round(current).toLocaleString();
+  });
 
   useEffect(() => {
     if (isInView && !hasAnimated) {

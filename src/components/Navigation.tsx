@@ -2,12 +2,13 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle2, RefreshCw, Rocket, Menu, X } from 'lucide-react';
+import { CheckCircle2, RefreshCw, Rocket, Zap, Menu, X } from 'lucide-react';
 
 const navItems = [
   { id: 'completed', label: 'Completed', icon: CheckCircle2 },
   { id: 'in-progress', label: 'In Progress', icon: RefreshCw },
   { id: 'roadmap', label: 'Roadmap', icon: Rocket },
+  { id: 'sales-system', label: 'Sales System', icon: Zap },
 ];
 
 export default function Navigation() {
